@@ -1,0 +1,146 @@
+html{
+    box-sizing: border-box;
+}
+* ::before,* ::after{
+    box-sizing: inherit;   
+}
+body{
+    font-family:"inter",sans-serif;
+    line-height: 1.5;
+    background: #f2f2f2;
+    color: #323233;
+}
+img{
+    max-width: 100%;
+}
+.icon {
+    fill: currentColor;
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+}
+a{
+    color: #323233;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 32px;
+    background:whitesmoke;
+    box-shadow: 0 2px 4px rgb(0,0,0,0.1);
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 20px;
+    padding: 24px;
+    border-bottom: 1px solid lightgrey;
+}
+section:last-child{
+    border-bottom: none;
+}
+.section-title{
+    font-weight: bold;
+    font-size: 18px;
+}
+.pro-item {
+    grid-column: 2 / 3;
+}
+/******
+* main info
+*******/
+img.photo{
+    width: 130px;
+}
+.my-name{
+    font-size: 48px;
+    line-height: 1;
+}
+.my-job{
+    font-size: 24px;
+    font-weight: 300;
+    color: #236fb2;
+}
+.link{
+    display: flex;
+    margin: 10px 0 20px 0;
+}
+.link-item{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.link-item .icon{
+    margin-right: 6px;
+}
+
+/******
+*=education
+*******/
+.edu{
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.edu-title-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.edu-School{
+    font-weight: bold;
+    line-height: 1.2;
+    display: block;
+    
+}
+
+/*****
+*=internship
+********/
+.Job-title-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.job-company{
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/*******
+*=skills
+*******/
+.skills-container{
+    display: grid;
+    margin-bottom: 24px;
+}
+.skills-container ul,.certify-container ul, .activity-container ul{
+    list-style-type: disc;
+    padding-left: 20px;
+}
+@media screen and (max-width:768px)
+{
+    section
+    {
+        grid-template-columns:1fr;
+    }
+
+    .link , .edu-title-container{
+        flex-direction: column;
+    }
+
+    .skills-container,.Job-title-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
